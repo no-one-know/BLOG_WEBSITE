@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {%if title%} 
+            {{title}}
+        {%else%} 
+            BLOG
+        {%endif%}
+    </title>
+    <link rel="stylesheet" href="{{url_for('static',filename='greeting.css')}}">
+</head>
+<body>
+    <div class="congo">
+        <div class="upper">
+            <h1>CONGRATULATION</h1>
+        </div>
+        <hr>
+        <div class="lower">
+            <section>
+                <p>
+                    {%for message in get_flashed_messages()%} 
+                        {{message}}
+                    {%endfor%}
+                </p>
+            </section>
+            <span>
+                <a href="{{url_for('users.signin')}}">
+                    CONTINUE
+                </a>
+            </span>
+        </div>
+    </div>
+</body>
+</html>

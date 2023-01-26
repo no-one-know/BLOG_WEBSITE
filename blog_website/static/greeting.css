@@ -1,0 +1,38 @@
+body{
+    background-color: rgb(15 16 16);
+}
+
+.congo{
+    background-color: whitesmoke;
+    border-style: solid;
+    border-color: violet;
+    border-radius: 20px;
+    border-width: 2px;
+    text-align: center;
+    margin: 20% 25%;
+}
+
+h1{
+    color: rgb(59, 133, 59);
+}
+
+p{
+    text-align: center;
+    font-weight: bold;
+}
+.lower{
+    margin: 10px;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: small;
+    background-color: blue;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+a:hover{
+    background-color: rgb(22, 49, 49);
+}

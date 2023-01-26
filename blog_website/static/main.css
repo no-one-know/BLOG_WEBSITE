@@ -1,0 +1,79 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+header{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-image: url("https://images.unsplash.com/photo-1537498425277-c283d32ef9db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1178&q=80");
+}
+
+.navbar{
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between ;
+    padding: 10px 80px;
+    background-color: rgb(16, 16, 37);
+}
+
+.logo{
+    padding: 5px;
+    font-size: larger;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+    gap: 20px;
+}
+
+.info a{
+    color: white;
+    padding: 5px 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: larger;
+    font-weight: bolder;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: green;
+}
+
+.info a:hover{
+    background-color: black;
+}
+
+.h-text{
+    max-width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: white;
+}
+
+.h-text h1{
+    font-size: 4em;
+}
+
+.h-text a{
+    text-decoration: none;
+    background-color: indianred;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bolder;
+    border-radius: 15px;
+    text-transform: uppercase;
+}
+
+.h-text a:hover{
+    background-color: black;
+}

@@ -1,0 +1,116 @@
+{%extends "base.html"%} 
+{%block content%}  
+        <div class="content-section">
+                <div class="media">
+                <img class="rounded-circle account-img" src="{{image_file}}">
+                        <div class="media-body">
+                                <div class="card mb-3">
+                                  <div class="card-body">
+                                    <div class="row">
+                                      <div class="col-sm-3">
+                                        <h6 class="mb-0">Username</h6>
+                                      </div>
+                                      <div class="col-sm-9 text-secondary">
+                                        {{current_profile.user_id}}
+                                      </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                      <div class="col-sm-3">
+                                        <h6 class="mb-0">Email</h6>
+                                      </div>
+                                      <div class="col-sm-9 text-secondary">
+                                        {{current_profile.account.email}}
+                                      </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                      <div class="col-sm-3">
+                                        <h6 class="mb-0">Firstname</h6>
+                                      </div>
+                                      <div class="col-sm-9 text-secondary">
+                                        {{current_profile.firstname}}
+                                      </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                      <div class="col-sm-3">
+                                        <h6 class="mb-0">Lastname</h6>
+                                      </div>
+                                      <div class="col-sm-9 text-secondary">
+                                        {{current_profile.lastname}}
+                                      </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                      <div class="col-sm-3">
+                                        <h6 class="mb-0">Gender</h6>
+                                      </div>
+                                      <div class="col-sm-9 text-secondary">
+                                        {{current_profile.gender}}
+                                      </div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                          <h6 class="mb-0">Country</h6>
+                                        </div>
+                                        <div class="col-sm-9 text-secondary">
+                                          {{current_profile.country}}
+                                        </div>
+                                      </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                          <h6 class="mb-0">Date of Birth</h6>
+                                        </div>
+                                        <div class="col-sm-9 text-secondary">
+                                          {{current_profile.dob}}
+                                        </div>
+                                      </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                          <h6 class="mb-0">Bio</h6>
+                                        </div>
+                                        <div class="col-sm-9 text-secondary">
+                                          {{current_profile.bio}}
+                                        </div>
+                                      </div>
+                                    <hr>
+                                    <div class="row">
+                                      <div class="col-sm-12 d-flex justify-content-between">
+                                        <a class="btn btn-info"  href="{{url_for('users.update')}}">UPDATE PROFILE</a>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModalCenter">DELETE ACCOUNT</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div> 
+                        </div>
+                </div>
+        </div>
+        <!-- Model -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">PERMANENTLY DELETE ACCOUNT?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>Are you sure to permanently delete the account? Once the account is deleted 
+                  all your personal information and posts will be lost and will not be recovered.
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCLE</button>
+                <form action="{{url_for('users.delete_account',id=current_profile.account.id)}}" method="post">
+                  <input class="btn btn-danger" type="submit" value="DELETE">
+              </form>
+              </div>
+            </div>
+          </div>
+        </div>
+{%endblock%}  

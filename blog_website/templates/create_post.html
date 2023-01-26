@@ -1,0 +1,16 @@
+{%extends "base.html"%}
+{%block content%}
+    <form action="{{url_for('posts.create_post')}}" method="post" >
+        <fieldset>
+            <legend style="text-align: center;">CREATE POST</legend>
+            {{form.csrf_token}}
+            {{form.title.label}}<br>
+            {{form.title(class="form-control")}}<br>
+            {{form.content.label}}<br>
+            {{form.content(class="form-control",row='500',cols='50')}}<hr>
+            <div class="text-center">
+                {{form.submit(class="btn btn-primary btn-lg")}}
+            </div>
+        </fieldset>
+    </form>
+{%endblock%}
