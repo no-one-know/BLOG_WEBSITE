@@ -37,6 +37,8 @@ def signin():
 
 @users.route("/signup",methods=['post','get'])
 def signup():
+    if current_user.is_authenticated:
+        return redirect(url_for('main.home',page_num=1))
     form=signup_form()
     if form.validate_on_submit():
         user=Logininfo.query.filter_by(username=form.username.data).first()

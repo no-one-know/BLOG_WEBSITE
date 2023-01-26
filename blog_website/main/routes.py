@@ -8,6 +8,8 @@ from blog_website.models import Post
 
 @main.route("/")
 def welcome():
+    if current_user.is_authenticated:
+        return redirect(url_for('main.home',page_num=1))
     return render_template("index.html",title="Welcome")
 
 @main.route("/success")
