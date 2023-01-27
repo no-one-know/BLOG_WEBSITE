@@ -180,6 +180,7 @@ def update():
 @users.route("/delete_account/<int:id>",methods=['post'])
 @login_required
 def delete_account(id):
+    logout_user()
     user=Logininfo.query.get(id)
     info=Personalinfo.query.filter_by(user_id=user.username).first()
     pic=info.picture
