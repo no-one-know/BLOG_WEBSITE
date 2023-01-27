@@ -23,3 +23,6 @@ Following is the list and link of technologies used while creating application:-
   <li><a href="https://pythonhosted.org/Flask-Mail/">Flak-Mail </a>for sending reset password links</li>
   <li><a href="https://docs.authlib.org/en/latest/">Authlib </a>library for generating authentication token</li>
 </ul>
+
+<a href="https://drive.google.com/file/d/1je3FeGdssx1aDrWYToDT-8gdGHSyqi85/view?usp=share_link">Demo Video Of Site</a>
+
