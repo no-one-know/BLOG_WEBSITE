@@ -7,3 +7,4 @@ flask-login
 pillow
 flask-mail
 authlib
+python-decouple
